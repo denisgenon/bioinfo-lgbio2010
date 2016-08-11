@@ -1,0 +1,112 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SYNTHESE DE COMPUTING LINGUISTIC
+% AUTEUR: DENIS GENON
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article} % Default font size is 12pt, it can be changed here
+
+\usepackage{geometry} % Required to change the page size to A4
+\geometry{a4paper} % Set the page size to be A4 as opposed to the default US Letter
+
+\usepackage{graphicx} % Required for including pictures
+\usepackage[USenglish]{babel} %francais, polish, spanish, ...
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc} %%TODO ansinew
+\usepackage{lmodern} %Type1-font for non-english texts and characters
+\usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
+\usepackage{caption}
+%\setlength\parindent{0pt} % Uncomment to remove all indentation from paragraphs
+\usepackage{enumitem}
+\setlist[enumerate]{topsep=1pt,itemsep=-1ex,partopsep=1ex,parsep=1ex}
+\setlist[itemize]{topsep=1pt,itemsep=-1ex,partopsep=1ex,parsep=1ex}
+\usepackage{amsmath}
+%\setlength\parindent{0pt} % Uncomment to remove all indentation from paragraphs
+\makeatletter
+\def\@seccntformat#1{%
+\protect\makebox[0pt][r]{\csname the#1\endcsname\quad}}
+\makeatother
+\setcounter{secnumdepth}{5}
+\usepackage{changepage}
+\usepackage[section]{placeins}
+\usepackage{caption}
+\usepackage[outercaption]{sidecap}    
+\usepackage{lscape}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+
+\textsc{\LARGE Université Catholique de Louvain}\\[1.5cm] % Name of your university/college
+\textsc{\Large Master en Sciences de l'informatique}\\[0.5cm] % Major heading such as course name
+\textsc{\large Intelligence Artificielle}\\[0.5cm] % Minor heading such as course title
+
+\HRule \\[0.4cm]
+{ \huge \bfseries LGBIO2010: Bioinformatics}\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Author:}\\
+Denis \textsc{Genon} % Your name
+\end{flushleft}
+\end{minipage}
+~
+
+
+%\includegraphics{Logo}\\[1cm] % Include a department/university logo - this will require the graphicx package
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\tableofcontents % Include a table of contents
+
+%----------------------------------------------------------------------------------------
+%	SYNTHESE
+%----------------------------------------------------------------------------------------
+
+\newpage
+\section{Sequences Statistics}
+\input{01_SequencesStatistics}
+
+\section{Pairwise Alignments}
+\input{02_PairwiseAlignments}
+
+\section{HMMs}
+\input{03_HMMs}
+
+\section{Multiple Alignments}
+\input{04_MultipleAlignments}
+
+\section{Profile HMMs}
+\input{05_pHMMs}
+
+\section{Large Scale Gene Expression Analysis}
+\input{06_GEA}
+
+\section{Inference of Gene Regulatory Network}
+\input{07_GRN}
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
